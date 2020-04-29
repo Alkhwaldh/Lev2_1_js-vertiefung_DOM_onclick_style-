@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+    <style>
+.nave {
+  background-color: blue;
+  height: 4em;
+  width: 3em;
+  padding: 2em;
+}
+    </style>
+</head>
+<body>
+ 
+   <ul>
+      <li><a class="nav" id="navHome" href="#home">Home</a></li>
+      <li><a class="nav" style="display: none;" id="navNews" href="#news">News</a></li>
+      <li onclick="chaneClickMe()"><a class="nav" id="navContact" href="#contact">Contact</a></li>
+      <li onclick="navbarChange()" class="nav" style="float:right"><a class="active" id="navChange">Change me</a></li>
+    </ul>
+
+<!-- Sehr wichtig zu verstehen was ändert sich von Schrift Color und wie Function Funktioniert   -->
+    <script>
+        
+    function navbarChange() {
+  
+      const navNews = document.getElementById("navNews");
+      const navHome = document.getElementById("navHome");  
+      navHome.style.backgroundColor="pink";
+      navHome.style.marginBottom = "10px"
+      navHome.style.fontSize = "2em";
+      navHome.style.borderRadius = "3em";
+      /* chane the Text */
+      navHome.textContent = "emoH";
+      navHome.style.display = ""
+      navNews.style.color = "pink";
+      /* beide ändert den Text und die zuerst geschrieben wird activert !!!!! */
+      navNews.style.padding = "2em";
+      navNews.style.display = "block"
+      navNews.style.fontSize = "3em"
+      navNews.textContent = "Hello Micka"
+      
+}
+
+function chaneClickMe (){
+  const chngeMe = document.getElementById("navChange");
+  chngeMe.style.borderRadius = "";
+  chngeMe.classList.toggle("nave");
+  
+}
+        
+    </script>
+  
+</body>
+</html>
